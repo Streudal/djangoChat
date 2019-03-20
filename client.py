@@ -30,8 +30,11 @@ def on_closing(event=None):
     my_msg.set("{quit}")
     send()
 
+
+
+"""Sets the dimensions and attributes of the popup GUI """
 top = tkinter.Tk()
-top.title("Chatter")
+top.title("Apex Legends Friend Finder")
 
 messages_frame = tkinter.Frame(top)
 my_msg = tkinter.StringVar()  # For the messages to be sent.
@@ -51,6 +54,9 @@ send_button = tkinter.Button(top, text="Send", command=send)
 send_button.pack()
 
 top.protocol("WM_DELETE_WINDOW", on_closing)
+
+"""Ends GUI dimensions and attributes"""
+
 
 #----Now comes the sockets part----
 HOST = input('Enter host: ') # '127.0.0.1' or 'localhost' will suffice
